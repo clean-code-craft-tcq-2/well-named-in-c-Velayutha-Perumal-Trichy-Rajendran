@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
-#include "25_pair_colour_code_def.h"
+#include "25pair_colour_code_def.h"
 
 int numberOfMajorColors =
     sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
