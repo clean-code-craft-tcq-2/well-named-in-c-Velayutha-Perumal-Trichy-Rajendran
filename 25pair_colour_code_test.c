@@ -3,6 +3,8 @@
 #include "25pair_colour_code_def.h"
 #include "get_colour_and_pair_number.h"
 
+const int MAX_COLORPAIR_NAME_CHARS = 16;
+
 void testNumberToPair(int pairNumber,
     enum MajorColor expectedMajor,
     enum MinorColor expectedMinor)
