@@ -36,13 +36,15 @@ void generate_reference_manual ()
 	ColorPair colorPair;
 	char colorPairNames[MAX_COLORPAIR_NAME_CHARS];
 	int max_pairNumber = numberOfMajorColors * numberOfMinorColors;
+	printf ("\n*********25-Pair Colour codes**********\n");
+	printf ("Pair_Num Major Minor\n");
 	
 	for (pairNumber = FIRST_PAIR; pairNumber <= max_pairNumber; pairNumber++)
 	{
 		colorPair = GetColorFromPairNumber(pairNumber);
     
 		ColorPairToString(&colorPair, colorPairNames);
-		printf("%d. %s\n", pairNumber, colorPairNames);
+		printf ("%d      |%s\n", pairNumber, colorPairNames);
 	}
 }
 
