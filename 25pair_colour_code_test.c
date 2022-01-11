@@ -44,7 +44,7 @@ void generate_reference_manual ()
 		colorPair = GetColorFromPairNumber(pairNumber);
     
 		ColorPairToString(&colorPair, colorPairNames);
-		printf ("%d      |%s\n", pairNumber, colorPairNames);
+		printf ("%d       |%s   |\n", pairNumber, colorPairNames);
 	}
 }
 
