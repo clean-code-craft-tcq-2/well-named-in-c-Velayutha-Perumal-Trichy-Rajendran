@@ -34,6 +34,6 @@ int main() {
     testPairToNumber(BLACK, ORANGE, 12);
     testPairToNumber(VIOLET, SLATE, 25);
 	
-	generate_reference_manual ();
+	validate_and_generate_reference_manual ();
     return 0;
 }
