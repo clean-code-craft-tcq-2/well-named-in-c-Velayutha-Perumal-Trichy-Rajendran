@@ -31,9 +31,9 @@ void validate_and_generate_reference_manual ()
 	int max_pairNumber = numberOfMajorColors * numberOfMinorColors;
 
 	printf ("\n*********%d-Pair Colour codes**********\n", max_pairNumber);
-	printf ("________________________\n");
+	printf ("____________________________\n");
 	printf ("Pair_Num\tColour-Pair\n");
-	printf ("________________________\n");
+	printf ("____________________________\n");
 	for (pairNumber = FIRST_PAIR_NUMBER; pairNumber <= max_pairNumber; pairNumber++)
 	{
 		colorPair = GetColorFromPairNumber(pairNumber);
@@ -41,7 +41,7 @@ void validate_and_generate_reference_manual ()
 		ColorPairToString(&colorPair, colorPairNames);
 		if (expectedpairNumber == pairNumber){
 			printf ("%-8d\t%-10s\n", pairNumber, colorPairNames);
-			printf("------------------------\n");
+			printf("-----------------------------\n");
 		}
 	}
 }
