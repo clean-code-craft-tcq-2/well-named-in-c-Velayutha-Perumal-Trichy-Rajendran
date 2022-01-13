@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "25pair_colour_code_def.h"
-#include "get_colour_and_pair_number.h"
+#include "colour_codes_def.h"
+#include "get_colour.h"
 
 void ColorPairToString(const ColorPair* colorPair, char* buffer) {
     sprintf(buffer, "%s %s",
@@ -21,4 +21,25 @@ ColorPair GetColorFromPairNumber(int pairNumber) {
 int GetPairNumberFromColor(const ColorPair* colorPair) {
     return colorPair->majorColor * numberOfMinorColors +
             colorPair->minorColor + 1;
+}
+
+void generate_reference_manual ()
+{
+	int pairNumber, expectedpairNumber;
+	ColorPair colorPair;
+	char colorPairNames[MAX_COLORPAIR_NAME_CHARS];
+	int max_pairNumber = numberOfMajorColors * numberOfMinorColors;
+
+	printf ("\n*********%d-Pair Colour codes**********\n", max_pairNumber);
+	printf ("Pair_Num Colour-Pair\n");
+	
+	for (pairNumber = FIRST_PAIR_NUMBER; pairNumber <= max_pairNumber; pairNumber++)
+	{
+		colorPair = GetColorFromPairNumber(pairNumber);
+		expectedpairNumber = GetPairNumberFromColor(&colorPair);
+		ColorPairToString(&colorPair, colorPairNames);
+		if (expectedpairNumber == pairNumber){
+			printf ("%-8d %-10s\n", pairNumber, colorPairNames);
+		}
+	}
 }

@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
-#include "25pair_colour_code_def.h"
-
-const int MAX_COLORPAIR_NAME_CHARS = 16;
-#define FIRST_PAIR 1
+#include "colour_codes_def.h"
 
 void testNumberToPair(int pairNumber,
     enum MajorColor expectedMajor,
@@ -28,24 +25,6 @@ void testPairToNumber(
     int pairNumber = GetPairNumberFromColor(&colorPair);
     printf("Got pair number %d\n", pairNumber);
     assert(pairNumber == expectedPairNumber);
-}
-
-void generate_reference_manual ()
-{
-	int pairNumber;
-	ColorPair colorPair;
-	char colorPairNames[MAX_COLORPAIR_NAME_CHARS];
-	int max_pairNumber = numberOfMajorColors * numberOfMinorColors;
-	printf ("\n*********25-Pair Colour codes**********\n");
-	printf ("Pair_Num Major Minor\n");
-	
-	for (pairNumber = FIRST_PAIR; pairNumber <= max_pairNumber; pairNumber++)
-	{
-		colorPair = GetColorFromPairNumber(pairNumber);
-    
-		ColorPairToString(&colorPair, colorPairNames);
-		printf ("%d       %s\n", pairNumber, colorPairNames);
-	}
 }
 
 int main() {

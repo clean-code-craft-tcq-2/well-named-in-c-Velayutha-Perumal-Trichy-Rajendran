@@ -1,5 +1,5 @@
-#ifndef __GET_COLOUR_AND_PAIR_NUMBER_H__
-#define __GET_COLOUR_AND_PAIR_NUMBER_H__
+#ifndef __GET_COLOUR_H__
+#define __GET_COLOUR_H__
 
 const char* MajorColorNames[] = {
     "White", "Red", "Black", "Yellow", "Violet"
