@@ -3,7 +3,7 @@
 #include "get_colour.h"
 
 void ColorPairToString(const ColorPair* colorPair, char* buffer) {
-    sprintf(buffer, "%s %s",
+    sprintf(buffer, "%s-%s",
         MajorColorNames[colorPair->majorColor],
         MinorColorNames[colorPair->minorColor]);
 }
@@ -23,7 +23,7 @@ int GetPairNumberFromColor(const ColorPair* colorPair) {
             colorPair->minorColor + 1;
 }
 
-void generate_reference_manual ()
+void validate_and_generate_reference_manual ()
 {
 	int pairNumber, expectedpairNumber;
 	ColorPair colorPair;
